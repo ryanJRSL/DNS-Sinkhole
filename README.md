@@ -22,12 +22,11 @@ flowchart TD
     B --> C[Homelab Host]
 
     subgraph C1 [Homelab Services]
-        D[DNS Filtering<br/>Pi-hole or AdGuard Home]
+        D[DNS Filtering<br/>Pi-hole]
         E[Reverse Proxy<br/>NGINX]
         F[Monitoring<br/>Prometheus]
         G[Dashboards<br/>Grafana]
         H[Centralized Logging<br/>ELK Stack]
-        I[Future Security Monitoring<br/>Suricata or Cowrie]
     end
 
     C --> D
