@@ -14,3 +14,35 @@ A self-hosted home lab focused on DNS filtering, monitoring, centralized logging
 - Centralized logging (ELK)
 - Reverse proxy
 - Docker Compose
+
+## Architecture
+```mermaid
+flowchart TD
+    A[Home Devices<br/>PC, Phone, Laptop, Tablet] --> B[Router / Gateway]
+    B --> C[Homelab Host]
+
+    subgraph C1 [Homelab Services]
+        D[DNS Filtering<br/>Pi-hole or AdGuard Home]
+        E[Reverse Proxy<br/>NGINX]
+        F[Monitoring<br/>Prometheus]
+        G[Dashboards<br/>Grafana]
+        H[Centralized Logging<br/>ELK Stack]
+        I[Future Security Monitoring<br/>Suricata or Cowrie]
+    end
+
+    C --> D
+    C --> E
+    C --> F
+    C --> G
+    C --> H
+    C --> I
+
+    D --> J[Upstream DNS]
+    J --> K[Internet]
+
+    D --> H
+    F --> G
+    C --> F
+    I --> H
+    E --> G
+    E --> H
