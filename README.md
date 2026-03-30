@@ -1,7 +1,7 @@
 # Homelab Infrastructure
 
 ## Overview
-Focused on DNS filtering, monitoring, centralized logging, reverse proxy routing, and containerized services.
+Focused on DNS filtering, monitoring, centralized logging, reverse proxy routing, and containerized services. </br>
 Refer to [PROGRESS.md](PROGRESS.md) for updates.
 
 ## Components
